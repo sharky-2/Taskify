@@ -1,0 +1,23 @@
+body {
+    width: 500px;
+    height: 900px;
+
+    background: linear-gradient(
+        0,
+        var(--dark-white),
+        var(--white)
+    );
+}
+
+section {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    padding: 15px;
+
+    border: 1px solid black;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

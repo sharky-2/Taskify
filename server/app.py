@@ -15,7 +15,9 @@ def run_flask():
 
 if __name__ == "__main__": 
 
-    flask_thread = threading.Thread(target=run_flask)
-    flask_thread.start()
-    webview.create_window("App", "http://127.0.0.1:5000", width=500, height=800)
-    webview.start()
+    app.run(debug=True) 
+
+    # flask_thread = threading.Thread(target=run_flask)
+    # flask_thread.start()
+    # webview.create_window("App", "http://127.0.0.1:5000", width=500, height=900)
+    # webview.start()
