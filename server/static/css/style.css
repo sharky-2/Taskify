@@ -16,71 +16,130 @@
 
 /* ========================================================== */
 /* Welcome */
-.title-frame {text-align: center; margin-bottom: 30px;}
-#info {
+.welcome-page {
     width: 100%;
-    height: 130px;
+    height: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: transform 0.5s ease;
+}
+.welcome-page .title-frame {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
+.welcome-page #info {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 10px;
 }
-#info div {
+
+.welcome-page #info div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: calc(100% - 100px);
 }
-#info div img {
+
+.welcome-page #info div img {
     width: 45px;
     height: 45px;
     object-fit: cover;
 }
-#info div .text-frame {
+
+.welcome-page #info div .text-frame {
     width: calc(100% - 70px);
     height: 100%;
-
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
 }
-#button-frame {
+
+.welcome-page #button-frame {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
-
     width: 100%;
     height: fit-content;
     text-align: center;
-
     margin-top: auto;
     margin-bottom: 50px;
 }
-#button-frame label {
+
+.welcome-page #button-frame label {
     display: inline-block;
     width: calc(100% - 100px);
 }
-#button-frame label a {
+
+.welcome-page #button-frame label a {
     text-decoration: none;
     color: var(--blue);
     font-weight: bold;
 }
-#button-frame button {
+
+.welcome-page #button-frame button {
     background-color: var(--blue);
     color: var(--secondary-text-color);
     font-weight: bold;
     font-size: 20px;
-
     width: calc(100% - 100px);
     height: 60px;
-
     outline: none;
     border: none;
     border-radius: 20px;
+}
+
+/* ========================================================== */
+/* Info */
+.info {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 30px;
+
+    text-align: center;
+    position: absolute;
+}
+.info img {width: 250px; margin-bottom: 70px;}
+
+
+/* ========================================================== */
+/* Card SLide animation */
+.card-slide {
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+}
+
+.card-slide-active {
+    transform: translateX(0);
+}
+
+.card-slide-exit {
+    transform: translateX(-100%);
+}
+.move-off-screen {
+    transform: translateX(100%);
+}
+.move-off-screen-welcome {
+    transform: translateX(0%);
+    transition: transform 0.5s ease;
+}
+.move-off-screen-final {
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
 }
