@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify</title>
+
+    <!-- Link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/root.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
+
+</head>
+<body>
+    
+    <img src="../static/imgs/other/image-hero.png" style="margin-bottom: auto; margin-top: 50px; width: 270px;">
+    <div class="title-frame">
+        <h1 class="title-design">Welcome to Taskify</h1>
+        <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+    </div>
+
+    <div id="info">
+        <div>
+            <img src="../static/imgs/icons/information-button.png">
+            <div class="text-frame">
+                <h1 class="small-title-design">Personalise and Customise</h1>
+                <label class="subtitle-design">Choose your list colours and emoji icons, and create Custom Smart Lists.</label>
+            </div>
+        </div>
+
+        <div>
+            <img src="../static/imgs/icons/smile.png">
+            <div class="text-frame">
+                <h1 class="small-title-design">Better Lists and Collaboration</h1>
+                <label class="subtitle-design">Use Shopping lists and iCloud-powered collaboration to help manage your life.</label>
+            </div>
+        </div>
+    </div>
+
+    <div id="button-frame">
+        <label class="text-design">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="#"> Learn more...</a></label>
+        <button class="click-effect">Start Exploring</button>
+    </div>
+
+    <div id="change-color" class="click-effect"></div>
+
+    <script src="../static/script/script.js"></script>
+</body>
+</html>
