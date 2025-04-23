@@ -7,8 +7,16 @@ from dotenv import load_dotenv
 
 app = Flask(__name__)
 @app.route("/", methods=["GET"])
-def index():
+def welcome():
     return render_template("welcome.html")
+
+@app.route("/registration")
+def registration():
+    return render_template("registration.html")
+
+@app.route("/index")
+def index():
+    return render_template("index.html")
 
 def run_flask():
     app.run(debug=False, use_reloader=False)

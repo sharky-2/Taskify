@@ -102,6 +102,7 @@
 /* ========================================================== */
 /* Info */
 .info {
+    background-color: var(--primary-bg-color);
     width: 100%;
     height: 100%;
 
@@ -130,7 +131,7 @@
 }
 
 .card-slide-exit {
-    transform: translateX(-100%);
+    transform: translateX(0%);
 }
 .move-off-screen {
     transform: translateX(100%);
@@ -143,3 +144,35 @@
     transform: translateX(100%);
     transition: transform 0.5s ease;
 }
+
+/* ========================================================== */
+/* Registration */
+#registration {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+#registration form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#registration input {
+    background: none;
+    height: 35px;
+    width: calc(100% - 200px);
+    padding: 5px 10px;
+
+    outline: none;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 10px;
+    font-size: 20px;
+}
+#registration input::placeholder {color: var(--secondary-text-color);}
