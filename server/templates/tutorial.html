@@ -41,26 +41,19 @@
         <button class="click-effect arrow-button next-info-btn"></button>
     </section>
 
-    <section class="card info-5 card-slide-unactive ">
+    <section class="card info-5 card-slide-unactive">
         <img src="../static/imgs/icons/contacts.png">
         <h1 class="title-design" style="width: 250px; display: inline-block;">Registration</h1>
         <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Create an account or log in to start creating, organizing, and tracking your tasks with ease.</label>
-        <a href="#"><button class="click-effect account-button">
 
-        </button></a>
-
-        <div id="form" class="input-form">
-            <label class="text-1">Create an</label>
-            <label class="title-1">Account</label>
-    
-            <textarea id="username" placeholder="Username" oninput="autoResize(this)" rows="1" class="textarea-input"></textarea>
-            <textarea id="password" placeholder="Password" oninput="autoResize(this)" rows="1" class="textarea-input"></textarea>
-    
-            <a href="/index"><button class="arrow-button submit-button click-effect"></button></a>
-        </div>
-
+        <section id="form" class="input-form">
+            <form>
+                <textarea id="username" placeholder="Username" oninput="autoResize(this)" rows="1" class="textarea-input"></textarea>
+                <textarea id="password" placeholder="Password" oninput="autoResize(this)" rows="1" class="textarea-input"></textarea>
+            </form>
+            <a href="/"><button class="arrow-button submit-button click-effect"></button></a>
+        </section>
     </section>
-
     
     
     <script src="../static/script/form.js"></script>

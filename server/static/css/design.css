@@ -23,6 +23,7 @@ section {
     padding: 20px;
     border-radius: 15px;
     transition: all .3s;
+
 }
 .close {
     opacity: .6;
@@ -128,9 +129,8 @@ section {
 /* ========================================================== */
 /* Form */
 .input-form {
-    background-color: var(--primary-bg-color);
-    width: 200px;
-    height: 45px;
+    width: calc(100% - 100px);
+    height: 100px;
 
     display: flex;
     justify-content: center;
@@ -138,73 +138,48 @@ section {
     gap: 5px;
 
     font-size: 20px;
-    border-radius: 100px;
     z-index: 100;
 
     position: absolute;
-    bottom: 5%;
+    bottom: -30%;
     left: 50%;
-    transform: translateX(-50%) scale(1);
-    transition: all .3s;
-    box-shadow: 0 0 10px var(--dark-white);
+    transform: translateX(-50%);
+    transition: all .5s;
+    filter: blur(0);
 }
-/* .input-form:active {transform: translateX(-50%) scale(.9);} */
-.input-form label {cursor: pointer;}
-.input-form label:nth-child(1) {opacity: .5;}
-.input-form label:nth-child(2) {font-weight: bold;}
 .input-form button {
-    opacity: 0;
+    background-color: var(--secondary-text-color) !important;
     position: absolute;
     right: 15px;
-    bottom: 20px;
+    bottom: 40px;
 
     transition: all .3s;
     z-index: 10;
     cursor: pointer;
 }
-.input-form textarea {position: absolute;  opacity: 0;}
-.input-form textarea::placeholder {color: var(--secondary-text-color);}
-.input-form textarea:nth-child(3) {
-    background:none;
-    color: black;
-    width: calc(100% - 30px);
-    max-height: 25px;
-
-    border: none;
-    outline: none;
-    resize: none;
-    overflow-y: auto;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    opacity: 0;
-    font-size: 25px;
-
-    left: 15px;
-    top: 15px;
-    font-weight: bold;
-
-    transition: all .3s;
+.input-form form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
 }
-.input-form textarea:nth-child(4) {
-    font-family: "Roboto";
+.input-form textarea {
     background:none;
     color: black;
-    width: calc(100% - 30px);
+    width: calc(100% - 150px);
     max-height: 25px;
-
+    font-size: 20px;
+    font-family: "Roboto";
     border: none;
     outline: none;
     resize: none;
     overflow-y: auto;
 
-    opacity: 0;
+    border-bottom: 1px solid var(--dark-white);
+    padding: 5px 10px;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
-    font-size: 15px;
-
-    left: 15px;
-    top: 50px;
-    transition: all .3s;
 }

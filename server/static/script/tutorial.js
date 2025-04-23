@@ -18,4 +18,5 @@ nextButtonInfo2.addEventListener("click", () => {
 });
 nextButtonInfo3.addEventListener("click", () => {
     document.querySelector('.info-5').classList.add("card-slide-active");
+    toggleForm()
 });
