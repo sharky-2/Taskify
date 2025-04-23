@@ -1,20 +1,4 @@
 /* ========================================================== */
-/* Change color */
-#change-color {
-    background-color: var(--black);
-    height: 100px;
-    width: 100px;
-    
-    border-radius: 100px;
-
-    position: absolute;
-    right: -50px;
-    bottom: -50px;
-
-    cursor: pointer;
-}
-
-/* ========================================================== */
 /* Welcome */
 .welcome-page {
     width: 100%;
@@ -115,6 +99,7 @@
 
     text-align: center;
     position: absolute;
+    z-index: 2;
 }
 .info img {width: 250px; margin-bottom: 70px;}
 
@@ -123,7 +108,7 @@
 /* Card SLide animation */
 .card-slide {
     transition: transform 0.5s ease;
-    transform: translateX(100%);
+    transform: translateX(110%);
 }
 
 .card-slide-active {
@@ -134,14 +119,14 @@
     transform: translateX(0%);
 }
 .move-off-screen {
-    transform: translateX(100%);
+    transform: translateX(110%);
 }
 .move-off-screen-welcome {
     transform: translateX(0%);
     transition: transform 0.5s ease;
 }
 .move-off-screen-final {
-    transform: translateX(100%);
+    transform: translateX(110%);
     transition: transform 0.5s ease;
 }
 
@@ -156,7 +141,7 @@
     align-items: center;
     transition: transform 0.5s ease;
 }
-#registration form {
+form {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -176,3 +161,85 @@
     font-size: 20px;
 }
 #registration input::placeholder {color: var(--secondary-text-color);}
+
+/* ========================================================== */
+/* Task */
+#tasks-place {
+
+    display: flex;
+    align-items: center;
+    justify-content: start; 
+    flex-direction: column;
+    gap: 30px; 
+    
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+#task-body section:has(.new-task)::before {
+    content: "";
+    background-color: var(--dark-white);
+    height: 2px;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+
+}
+#tasks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    position: relative;
+}
+#tasks .new-task {
+    width: 100%;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+#tasks .new-task .number {
+    opacity: .5;
+    font-size: 40px;
+}
+#tasks .new-task .other-info {
+    color: var(--secondary-text-color);
+    width: 100%;
+    opacity: .5;
+    font-size: 15px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+#tasks a {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#add-task-frame input {
+    background: none;
+    color: var(--secondary-text-color);
+    height: 35px;
+    width: calc(100% - 200px);
+    padding: 5px 10px;
+
+    outline: none;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 10px;
+    font-size: 20px;
+}
+#add-task-frame input::placeholder {color: var(--secondary-text-color);}

@@ -1,43 +1,71 @@
 // ==========================================================
-// Change Color
-const change_color = document.getElementById("change-color");
-
-change_color.addEventListener("click", () => {
-    
-    if (change_color.style.backgroundColor == "var(--black)") {
-        change_color.style.backgroundColor = "var(--white)";
-        document.documentElement.style.setProperty("--primary-bg-color", "var(--black)");
-        document.documentElement.style.setProperty("--secondary-text-color", "var(--white)");
-    } else {
-        change_color.style.backgroundColor = "var(--black)";
-        document.documentElement.style.setProperty("--primary-bg-color", "var(--white)");
-        document.documentElement.style.setProperty("--secondary-text-color", "var(--black)");
-    }
-
+// Add new task
+const close_card_task = document.getElementById("card-button-close")
+const open_card_task = document.getElementById("add-task")
+open_card_task.addEventListener("click", () => {
+    document.querySelector('.card-new-task').classList.add("card-slide-active");
+});
+close_card_task.addEventListener("click", () => {
+    document.querySelector('.card-new-task').classList.add("move-off-screen-final");
+    document.querySelector('.card-new-task').classList.remove("card-slide-active");
+    document.querySelector('.card-new-task').classList.remove("move-off-screen-final");
 });
 
-// ==========================================================
-// Welcome page Slide Show
-const welcome_button = document.getElementById("next-page");
-const welcome_page = document.querySelector(".welcome-page")
-const nextButtonInfo1 = document.querySelector('.info-1 .next-info-btn');
-const nextButtonInfo2 = document.querySelector('.info-2 .next-info-btn');
+const form = document.getElementById('task-form');
 
-welcome_button.addEventListener("click", () => {
-    document.querySelector('.info-1').classList.remove("card-slide-exit", "move-off-screen");
-    document.querySelector('.info-2').classList.remove("card-slide-active", "card-slide-exit", "move-off-screen");
-    document.querySelector('.info-3').classList.remove("card-slide-active", "move-off-screen-final");
-    welcome_page.classList.remove("move-off-screen-welcome", "card-slide-exit");
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    document.querySelector('.info-1').classList.add("card-slide-active");
-    welcome_page.classList.add("card-slide-exit");
+    const title = document.getElementById('task-title').value;
+    const text = document.getElementById('task-text').value;
 
-});
-nextButtonInfo1.addEventListener("click", () => {
-    document.querySelector('.info-1').classList.add("card-slide-exit");
-    document.querySelector('.info-2').classList.add("card-slide-active");
-});
-nextButtonInfo2.addEventListener("click", () => {
-    document.querySelector('.info-2').classList.add("card-slide-exit");
-    document.querySelector('.info-3').classList.add("card-slide-active");
+    // Create new section
+    const taskSection = document.createElement('section');
+    taskSection.id = 'tasks';
+
+    const taskDiv = document.createElement('div');
+    taskDiv.classList.add('new-task');
+
+    const titleElement = document.createElement('h1');
+    titleElement.className = 'title-design';
+    titleElement.textContent = title;
+
+    const textElement = document.createElement('label');
+    textElement.className = 'text-design';
+    textElement.textContent = text;
+
+    const otherInfoDiv = document.createElement('div');
+    otherInfoDiv.classList.add('other-info');
+
+    const dateLabel = document.createElement('label');
+    const timeLabel = document.createElement('label');
+
+    const now = new Date();
+    const dateOptions = { year: 'numeric', day: '2-digit', month: 'long' };
+    const timeOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
+
+    dateLabel.textContent = now.toLocaleDateString('en-US', dateOptions);
+    timeLabel.textContent = now.toLocaleTimeString('en-US', timeOptions);
+
+    otherInfoDiv.appendChild(dateLabel);
+    otherInfoDiv.appendChild(timeLabel);
+
+    taskDiv.appendChild(titleElement);
+    taskDiv.appendChild(textElement);
+    taskDiv.appendChild(otherInfoDiv);
+
+    const buttonLink = document.createElement('a');
+    buttonLink.href = '#';
+    const button = document.createElement('button');
+    button.className = 'click-effect arrow-button';
+    buttonLink.appendChild(button);
+
+    taskSection.appendChild(taskDiv);
+    taskSection.appendChild(buttonLink);
+
+    // Append to body
+    document.getElementById("tasks-place").appendChild(taskSection);
+
+    // Clear inputs
+    form.reset();
 });

@@ -4,6 +4,7 @@ body {
     height: calc(900px - 95px);
 
     padding: 20px;
+    margin: 0 auto;
 
     display: flex;
     justify-content: center;
@@ -24,6 +25,7 @@ body {
 .small-title-design,
 .subtitle-design {
     color: var(--secondary-text-color);
+    margin: 0;
 }
 .title-design {font-size: 40px;margin: 0;}
 .small-title-design {font-weight: bold; font-size: 15px; margin: 0;}
@@ -31,6 +33,21 @@ body {
 
 /* ========================================================== */
 /* Button */
+#change-color {
+    background-color: var(--black);
+    height: 100px;
+    width: 100px;
+    
+    border-radius: 100px;
+
+    position: absolute;
+    right: -30px;
+    bottom: -30px;
+
+    cursor: pointer;
+    z-index: 100;
+}
+
 .arrow-button {
     background-color: var(--blue) !important;
     background: url("../imgs/icons/right-arrow.png");
@@ -44,6 +61,25 @@ body {
     outline: none;
     border: none;
     border-radius: 100px;
+}
+#add-task {
+    background-color: var(--blue) !important;
+    background: url("../imgs/icons/plus.png");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100px;
+    width: 100px;
+    
+    border-radius: 100px;
+
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+
+    cursor: pointer;
+    z-index: 100;
 }
 
 /* ========================================================== */
