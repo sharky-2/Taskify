@@ -13,40 +13,58 @@
 </head>
 <body>
     
-    <section class="welcome-page info">
-
+    <section class="card info-1">
         <img src="../static/imgs/icons/browser.png">
         <h1 class="title-design" style="width: 250px; display: inline-block;">Welcome to Taskify</h1>
         <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </label>
         <button class="click-effect arrow-button" id="next-page"></button>
-
     </section>
 
-    <section class="info info-1 card-slide">
+    <section class="card info-2 card-slide-unactive">
         <img src="../static/imgs/icons/pages.png">
         <h1 class="title-design" style="width: 250px; display: inline-block;">Manage Your Daily To-Do</h1>
         <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </label>
         <button class="click-effect arrow-button next-info-btn"></button>
     </section>
 
-    <section class="info info-2 card-slide">
+    <section class="card info-3 card-slide-unactive">
         <img src="../static/imgs/icons/twitter.png">
         <h1 class="title-design" style="width: 250px; display: inline-block;">Quick & Simple</h1>
         <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </label>
         <button class="click-effect arrow-button next-info-btn"></button>
     </section>
 
-    <section class="info info-3 card-slide">
+    <section class="card info-4 card-slide-unactive">
         <img src="../static/imgs/icons/mortarboard.png">
         <h1 class="title-design" style="width: 250px; display: inline-block;">Smart Reminders</h1>
         <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </label>
-        <a href="/registration"><button class="click-effect arrow-button"></button></a>
+        <button class="click-effect arrow-button next-info-btn"></button>
     </section>
 
+    <section class="card info-5 card-slide-unactive ">
+        <img src="../static/imgs/icons/contacts.png">
+        <h1 class="title-design" style="width: 250px; display: inline-block;">Registration</h1>
+        <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Create an account or log in to start creating, organizing, and tracking your tasks with ease.</label>
+        <a href="#"><button class="click-effect account-button">
 
-    <div id="change-color" class="click-effect"></div>
+        </button></a>
 
-    <script src="../static/script/welcome.js"></script>
-    <script src="../static/script/color-change.js"></script>
+        <div id="form" class="input-form">
+            <label class="text-1">Create an</label>
+            <label class="title-1">Account</label>
+    
+            <textarea id="username" placeholder="Username" oninput="autoResize(this)" rows="1" class="textarea-input"></textarea>
+            <textarea id="password" placeholder="Password" oninput="autoResize(this)" rows="1" class="textarea-input"></textarea>
+    
+            <a href="/index"><button class="arrow-button submit-button click-effect"></button></a>
+        </div>
+
+    </section>
+
+    
+    
+    <script src="../static/script/form.js"></script>
+
+    <script src="../static/script/tutorial.js"></script>
 </body>
 </html>

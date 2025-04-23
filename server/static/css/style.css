@@ -1,95 +1,6 @@
 /* ========================================================== */
-/* Welcome */
-.welcome-page {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: transform 0.5s ease;
-}
-.welcome-page .title-frame {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.welcome-page #info {
-    width: 100%;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.welcome-page #info div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 100px);
-}
-
-.welcome-page #info div img {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-}
-
-.welcome-page #info div .text-frame {
-    width: calc(100% - 70px);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-}
-
-.welcome-page #button-frame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: 50px;
-}
-
-.welcome-page #button-frame label {
-    display: inline-block;
-    width: calc(100% - 100px);
-}
-
-.welcome-page #button-frame label a {
-    text-decoration: none;
-    color: var(--blue);
-    font-weight: bold;
-}
-
-.welcome-page #button-frame button {
-    background-color: var(--blue);
-    color: var(--secondary-text-color);
-    font-weight: bold;
-    font-size: 20px;
-    width: calc(100% - 100px);
-    height: 60px;
-    outline: none;
-    border: none;
-    border-radius: 20px;
-}
-
-/* ========================================================== */
-/* Info */
-.info {
-    background-color: var(--primary-bg-color);
-    width: 100%;
-    height: 100%;
-
+/* Tutorial */
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,71 +12,20 @@
     position: absolute;
     z-index: 2;
 }
-.info img {width: 250px; margin-bottom: 70px;}
+.card img {width: 250px; margin-bottom: 70px;}
 
-
-/* ========================================================== */
 /* Card SLide animation */
-.card-slide {
+.card-slide-unactive {
     transition: transform 0.5s ease;
     transform: translateX(110%);
 }
-
 .card-slide-active {
     transform: translateX(0);
 }
 
-.card-slide-exit {
-    transform: translateX(0%);
-}
-.move-off-screen {
-    transform: translateX(110%);
-}
-.move-off-screen-welcome {
-    transform: translateX(0%);
-    transition: transform 0.5s ease;
-}
-.move-off-screen-final {
-    transform: translateX(110%);
-    transition: transform 0.5s ease;
-}
-
-/* ========================================================== */
-/* Registration */
-#registration {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease;
-}
-form {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-#registration input {
-    background: none;
-    height: 35px;
-    width: calc(100% - 200px);
-    padding: 5px 10px;
-
-    outline: none;
-    border: 1px solid var(--secondary-text-color);
-    border-radius: 10px;
-    font-size: 20px;
-}
-#registration input::placeholder {color: var(--secondary-text-color);}
-
 /* ========================================================== */
 /* Task */
 #tasks-place {
-
     display: flex;
     align-items: center;
     justify-content: start; 

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 app = Flask(__name__)
 @app.route("/", methods=["GET"])
 def welcome():
-    return render_template("welcome.html")
+    return render_template("tutorial.html")
 
 @app.route("/registration")
 def registration():
@@ -27,5 +27,5 @@ if __name__ == "__main__":
 
     # flask_thread = threading.Thread(target=run_flask)
     # flask_thread.start()
-    # webview.create_window("Taskify", "http://127.0.0.1:5000", width=600, height=900)
+    # webview.create_window("Taskify", "http://127.0.0.1:5000", width=550, height=870, frameless=True)
     # webview.start()

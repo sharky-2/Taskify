@@ -1,9 +1,8 @@
 body {
-    background-color: var(--primary-bg-color);
-    width: calc(600px - 72px);
-    height: calc(900px - 95px);
+    background-color: var(--black);
+    width: 530px;
+    height: 830px;
 
-    padding: 20px;
     margin: 0 auto;
 
     display: flex;
@@ -17,7 +16,17 @@ body {
 
     font-family: "Roboto";
 }
-
+section {
+    background-color: var(--primary-bg-color);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+    border-radius: 15px;
+    transition: all .3s;
+}
+.close {
+    opacity: .6;
+}
 /* ========================================================== */
 /* Texts */
 .title-design,
@@ -81,8 +90,121 @@ body {
     cursor: pointer;
     z-index: 100;
 }
+.account-button {
+    background-color: var(--blue) !important;
+    background: url("../imgs/icons/user.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 50px;
+    height: 50px;
+
+    outline: none;
+    border: none;
+    border-radius: 100px;
+}
 
 /* ========================================================== */
 /* Effects */
 .click-effect {transition: all .3s; cursor: pointer;}
 .click-effect:active {transform: scale(.9);}
+
+/* ========================================================== */
+/* Input */
+.input-design-1 {
+    background: none;
+    height: 35px;
+    width: calc(100% - 200px);
+    padding: 5px 10px;
+
+    outline: none;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 10px;
+    font-size: 20px;
+}
+.input-design-1::placeholder {color: var(--secondary-text-color);}
+
+/* ========================================================== */
+/* Form */
+.input-form {
+    background-color: var(--primary-bg-color);
+    width: 200px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 20px;
+    border-radius: 100px;
+    z-index: 100;
+
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    transition: all .3s;
+    box-shadow: 0 0 10px var(--dark-white);
+}
+/* .input-form:active {transform: translateX(-50%) scale(.9);} */
+.input-form label {cursor: pointer;}
+.input-form label:nth-child(1) {opacity: .5;}
+.input-form label:nth-child(2) {font-weight: bold;}
+.input-form button {
+    opacity: 0;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+
+    transition: all .3s;
+    z-index: 10;
+    cursor: pointer;
+}
+.input-form textarea {position: absolute;  opacity: 0;}
+.input-form textarea::placeholder {color: var(--secondary-text-color);}
+.input-form textarea:nth-child(3) {
+    background:none;
+    color: black;
+    width: calc(100% - 30px);
+    max-height: 25px;
+
+    border: none;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    opacity: 0;
+    font-size: 25px;
+
+    left: 15px;
+    top: 15px;
+    font-weight: bold;
+
+    transition: all .3s;
+}
+.input-form textarea:nth-child(4) {
+    font-family: "Roboto";
+    background:none;
+    color: black;
+    width: calc(100% - 30px);
+    max-height: 25px;
+
+    border: none;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+
+    opacity: 0;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-size: 15px;
+
+    left: 15px;
+    top: 50px;
+    transition: all .3s;
+}
