@@ -175,7 +175,6 @@ section {
     resize: none;
     overflow-y: auto;
 
-    border-bottom: 1px solid var(--dark-white);
     padding: 5px 10px;
 
     scrollbar-width: none;

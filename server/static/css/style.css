@@ -103,3 +103,10 @@
     font-size: 20px;
 }
 #add-task-frame input::placeholder {color: var(--secondary-text-color);}
+
+/* ========================================================== */
+/* Main page */
+.main-page {
+    background-color: red;
+
+}

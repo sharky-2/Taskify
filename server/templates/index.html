@@ -11,30 +11,63 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
 
 </head>
-<body id="task-body">
+<body>
     
-    <div id="tasks-place"></div>
-
-    <section class="info card-new-task card-slide" id="add-task-frame">
-        <h1 class="title-design" style="width: 250px; display: inline-block;">Add New Task</h1>
-        <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </label>    
-        
-        <form id="task-form">
-            <input type="text" id="task-title" name="task-title" placeholder="Task title" required>
-            <input type="text" id="task-text" name="task-text" placeholder="Task text" required>
-            <button type="submit" class="click-effect arrow-button" id="card-button-close"></button>
-        </form>
+    <!-- ===================================================================== -->
+    <!-- Info cards -->
+    <section class="card info-1">
+        <img src="../static/imgs/icons/browser.png">
+        <h1 class="title-design" style="width: 250px; display: inline-block;">Welcome to Taskify</h1>
+        <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </label>
+        <button class="click-effect arrow-button" id="next-page"></button>
     </section>
 
-    <div id="tasks"></div>
+    <section class="card info-2 card-slide-unactive">
+        <img src="../static/imgs/icons/pages.png">
+        <h1 class="title-design" style="width: 250px; display: inline-block;">Manage Your Daily To-Do</h1>
+        <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </label>
+        <button class="click-effect arrow-button next-info-btn"></button>
+    </section>
 
-    <div id="add-task" class="click-effect"></div>
-    <div id="change-color" class="click-effect"></div>
+    <section class="card info-3 card-slide-unactive">
+        <img src="../static/imgs/icons/twitter.png">
+        <h1 class="title-design" style="width: 250px; display: inline-block;">Quick & Simple</h1>
+        <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </label>
+        <button class="click-effect arrow-button next-info-btn"></button>
+    </section>
 
-    <script src="../static/script/script.js"></script>
-    <script src="../static/script/color-change.js"></script>
+    <section class="card info-4 card-slide-unactive">
+        <img src="../static/imgs/icons/mortarboard.png">
+        <h1 class="title-design" style="width: 250px; display: inline-block;">Smart Reminders</h1>
+        <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </label>
+        <button class="click-effect arrow-button next-info-btn"></button>
+    </section>
 
+    <!-- ===================================================================== -->
+    <!-- Registration -->
+    <section class="card info-5 card-slide-unactive">
+        <img src="../static/imgs/icons/contacts.png">
+        <h1 class="title-design" style="width: 250px; display: inline-block;">Registration</h1>
+        <label class="text-design" style="width: calc(100% - 200px); display: inline-block;">Create an account or log in to start creating, organizing, and tracking your tasks with ease.</label>
+
+        <section id="form" class="input-form">
+            <form>
+                <textarea id="username" placeholder="Username" oninput="autoResize(this)" rows="1" class="textarea-input"></textarea>
+                <textarea id="password" placeholder="Password" oninput="autoResize(this)" rows="1" class="textarea-input"></textarea>
+            </form>
+            <a href="/"><button class="arrow-button submit-button click-effect"></button></a>
+        </section>
+    </section>
+    
+    <!-- ===================================================================== -->
+    <!-- Main page -->
+    <section class="card main-page">
+
+        
+
+    </section>
+    
+    <script src="../static/script/form.js"></script>
+    <script src="../static/script/tutorial.js"></script>
 </body>
 </html>
