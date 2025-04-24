@@ -18,12 +18,10 @@ body {
 }
 section {
     background-color: var(--primary-bg-color);
-    width: calc(100% - 40px);
+    width: calc(100% - 35px);
     height: calc(100% - 40px);
     padding: 20px;
-    border-radius: 15px;
     transition: all .3s;
-
 }
 .close {
     opacity: .6;
